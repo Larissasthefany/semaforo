@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(94, 90, 90);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    /* Para garantir que apareça sobre outros elementos */
+    opacity: 0;
+    /* Invisível por padrão */
+    transition: opacity 0.5s ease;
+    /* Transição suave */
+}
+
+.popup.show {
+    opacity: 1;
+}
+
+
+.semaforo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    height: 300px;
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.semaforo div {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: opacity 0.5s ease;
+    opacity: 0.2;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
